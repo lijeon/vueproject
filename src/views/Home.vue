@@ -1,18 +1,48 @@
 <template>
   <div class="home">
-    <img alt="Vue logo" src="../assets/logo.png">
-    <HelloWorld msg="Welcome to Your Vue.js App"/>
+   <section class="banner" id="sec" :class="{active : isActive }">
+     <header>
+       <a href="#" class="logo">Logo</a>
+       <div id="toggle" @click="toggle()" >
+
+       </div>
+     </header>
+
+     <div class="content">
+       <h2>Hello World, <br>I'm <span>Jungkook</span></h2>
+       <p>Lorem ipsum dolor sit, amet consectetur adipisicing elit. Molestiae dolor non veritatis facilis nobis. Modi sunt error, architecto ex, molestias accusantium nam pariatur nemo dolore sed eius? Impedit, voluptas iste!</p>
+     </div>
+     <ul class="sci">
+      <li><a href="#"><img src="../assets/facebook.png"></a></li>
+      <li><a href="#"><img src="../assets/twitter.png"></a></li>
+      <li><a href="#"><img src="../assets/linkedin.png"></a></li>
+     </ul>
+   </section>
+   
   </div>
 </template>
 
 <script>
-// @ is an alias to /src
-import HelloWorld from '@/components/HelloWorld.vue'
 
 export default {
   name: 'Home',
+  data() {
+    return {
+      isActive: false,
+      activeNav: false,
+    }
+  },
   components: {
-    HelloWorld
+
+  },
+  methods: {
+    toggle() {
+      // let sec = document.getElementById('sec');
+      // sec.classList.toggle('active')
+      this.isActive = !this.isActive;
+
+    },
+
   }
 }
 </script>
