@@ -7,19 +7,59 @@
       <div class="content">
         <h2>Arlinda Xhemaili <br><span>Frontend Developer</span></h2>
       </div>
+    
     </div>
-
+     
     <div class="box">
       <div class="imgBx">
         <img src="../assets/pz.jpg">
       </div>
       <div class="content">
-        <h2>Pleurat Zejnullahu <br><span>Frontend Developer</span></h2>
+      <!-- <a :href="downloadUrl" download="ArlindaXhemaili-CV.pdf" style="color:#FF0000;text-decoration:underline">Qisishmne</a> -->
+        <h2>Pleurat Zejnullahu <br><span>Frontend Developer   <button @click="onClick()">DownLoad</button></span></h2>
       </div>
+      
     </div>
+
+
+    
   </div>
 </template>
 
+<script>
+import axios from 'axios'
+export default {
+  data() {
+    return {
+      // downloadUrl: `${process.env.BASE_URL}public/ArlindaXhemaili-CV.pdf`,// Template download file address
+      // url:  `${process.env.BASE_URL}/ArlindaXhemaili-CV.pdf`,
+      // item: {
+      //   label: 'ArlindaXhemaili-CV.pdf',
+      //   url : `${process.env.BASE_URL}public/ArlindaXhemaili-CV.pdf`
+      // }
+    }
+  },
+  methods: {
+    onClick() {
+        axios({
+              url: 'http://localhost:8000/public/ArlindaXhemaili-CV.pdf',
+              method: 'GET',
+              responseType: 'blob',
+          }).then((response) => {
+                var fileURL = window.URL.createObjectURL(new Blob([response.data]));
+                var fileLink = document.createElement('a');
+
+                fileLink.href = fileURL;
+                fileLink.setAttribute('download', 'file.pdf');
+                document.body.appendChild(fileLink);
+
+                fileLink.click();
+          });
+    }
+      
+  }
+}
+</script>
 
 <style scoped>
 .workedBy {

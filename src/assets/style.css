@@ -119,17 +119,16 @@ header #toggle::after {
    font-weight: 600;
    text-transform: uppercase;
    
-
-   color: #fff;
+   color: #7a00dd42;
    text-shadow:
        0 0 0px #fff,
        0 0 10px #fff,
        0 0 0px #fff,
        0 0 42px rgb(162, 0, 255),
-       0 0 0px rgb(153, 0, 255),
-       0 0 0px #0fa,
-       0 0 0px #0fa,
-       0 0 0px #0fa;
+       0 0 0px rgb(0, 183, 255),
+       0 0 0px rgb(0, 183, 255),
+       0 0 0px rgb(0, 183, 255),
+       0 0 0px rgb(0, 183, 255);
 }
 /* 
 .content {

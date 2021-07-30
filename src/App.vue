@@ -10,6 +10,7 @@
          <ul>
            <li><router-link to="/">Home</router-link></li>
            <li><router-link to="/about">About</router-link></li>
+           <li><router-link to="/work">Work</router-link></li>
            <li><router-link to="/worked-by">worked By</router-link></li>
          </ul>
 
@@ -53,17 +54,19 @@ html,body{
 }
 
 #nav a.router-link-exact-active {
-  color: #7a00dd88;
-   text-shadow:
-       0 0 0px #fff,
-       0 0 10px #fff,
-       0 0 0px #fff,
-       0 0 42px rgb(162, 0, 255),
-       0 0 0px rgb(0, 183, 255),
-       0 0 0px rgb(0, 183, 255),
-       0 0 0px rgb(0, 183, 255),
-       0 0 0px rgb(0, 183, 255);
 
+
+
+   color: #fff;
+   text-shadow:
+       /* 0 0 0px #fff,
+       0 0 10px #fff,
+       0 0 0px #fff, */
+       0 0 10px rgb(162, 0, 255),
+       0 0 20px rgb(153, 0, 255),
+       0 0 40px #0fa,
+       0 0 80px #0fa,
+       0 0 120px #0fa;
 } 
 
 

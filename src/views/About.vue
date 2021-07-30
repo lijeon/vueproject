@@ -87,7 +87,6 @@
 .container {
   position: relative;
   display: flex;
-  justify-content: space-between;
   align-items: center;
   width:1500px;
 }
