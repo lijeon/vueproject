@@ -16,7 +16,7 @@
       </div>
       <div class="content">
       <!-- <a :href="downloadUrl" download="ArlindaXhemaili-CV.pdf" style="color:#FF0000;text-decoration:underline">Qisishmne</a> -->
-        <h2>Pleurat Zejnullahu <br><span>Frontend Developer   <button @click="onClick()">DownLoad</button></span></h2>
+        <h2>Pleurat Zejnullahu <br><span>Frontend Developer  <a href="files/ArlindaXhemaili-CV.pdf">Download CV</a></span></h2>
       </div>
       
     </div>
@@ -42,7 +42,7 @@ export default {
   methods: {
     onClick() {
         axios({
-              url: 'http://localhost:8000/public/ArlindaXhemaili-CV.pdf',
+              url: 'http://localhost:8000/files/ArlindaXhemaili-CV.pdf',
               method: 'GET',
               responseType: 'blob',
           }).then((response) => {
