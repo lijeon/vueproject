@@ -5,7 +5,7 @@
         <img src="../assets/axh.jpg">
       </div>
       <div class="content">
-        <h2>Arlinda Xhemaili <br><span>Frontend Developer</span></h2>
+        <h2>Arlinda Xhemaili <br><span>Frontend Developer <br> <a href="files/ArlindaXhemaili-CV.pdf" style="color: #ff005e">Download CV</a></span></h2>
       </div>
     
     </div>
@@ -15,8 +15,7 @@
         <img src="../assets/pz.jpg">
       </div>
       <div class="content">
-      <!-- <a :href="downloadUrl" download="ArlindaXhemaili-CV.pdf" style="color:#FF0000;text-decoration:underline">Qisishmne</a> -->
-        <h2>Pleurat Zejnullahu <br><span>Frontend Developer  <a href="files/ArlindaXhemaili-CV.pdf">Download CV</a></span></h2>
+        <h2>Pleurat Zejnullahu <br><span>Frontend Developer <br> <a href="files/ArlindaXhemaili-CV.pdf" style="color: #ff005e">Download CV</a></span></h2>
       </div>
       
     </div>
