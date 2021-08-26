@@ -15,12 +15,10 @@
         <img src="../assets/pz.jpg">
       </div>
       <div class="content">
-        <h2>Pleurat Zejnullahu <br><span>Frontend Developer <br> <a href="files/ArlindaXhemaili-CV.pdf" style="color: #ff005e">Download CV</a></span></h2>
+        <h2>Pleurat Zejnullahu <br><span>Frontend Developer <br> <a href="files/PleuratZejnullahu.pdf" style="color: #ff005e">Download CV</a></span></h2>
       </div>
       
     </div>
-
-
     
   </div>
 </template>
