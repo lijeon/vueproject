@@ -1,6 +1,6 @@
 <template>
   <div class="workedBy">
-    <div class="box">
+    <div class="box" @mouseover="play()" @mouseleave="stopSound()">
       <div class="imgBx">
         <img src="../assets/axh.jpg">
       </div>
@@ -10,7 +10,7 @@
     
     </div>
      
-    <div class="box">
+    <div class="box" @mouseover="play()">
       <div class="imgBx">
         <img src="../assets/pz.jpg">
       </div>
@@ -24,6 +24,7 @@
 </template>
 
 <script>
+ /* eslint-disable */
 import axios from 'axios'
 export default {
   data() {
@@ -35,6 +36,9 @@ export default {
       //   url : `${process.env.BASE_URL}public/ArlindaXhemaili-CV.pdf`
       // }
     }
+  },
+  beforeMount(){
+      const sound = ( new Audio( require('../../public/sounds/test2.wav')).play());
   },
   methods: {
     onClick() {
@@ -52,6 +56,13 @@ export default {
 
                 fileLink.click();
           });
+    },
+
+    play(){
+      const sound = ( new Audio( require('../../public/sounds/test4.wav')).play());
+    },
+    stopSound(){
+      
     }
       
   }

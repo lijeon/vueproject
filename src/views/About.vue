@@ -54,6 +54,17 @@
 </template>
 
 
+<script>
+ /* eslint-disable */
+export default {
+  name: 'Home',
+  
+  beforeMount(){
+      const sound = ( new Audio( require('../../public/sounds/test2.wav')).play());
+  }
+}
+</script>
+
 <style scoped>
 
 .about {

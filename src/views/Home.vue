@@ -31,7 +31,7 @@
 </template>
 
 <script>
-
+ /* eslint-disable */
 export default {
   name: 'Home',
   data() {
@@ -50,6 +50,9 @@ export default {
       this.isActive = !this.isActive;
 
     },
+    play(){
+      const sound = ( new Audio( require('../../public/sounds/test2.wav')).play());
+    }
 
   }
 }
