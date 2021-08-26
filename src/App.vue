@@ -10,6 +10,7 @@
          <ul>
            <li><router-link to="/">Home</router-link></li>
            <li><router-link to="/about">About</router-link></li>
+           <li><router-link to="/skills">Skills</router-link></li>
            <li><router-link to="/work">Work</router-link></li>
            <li><router-link to="/worked-by">worked By</router-link></li>
          </ul>
@@ -73,19 +74,19 @@ html,body{
 
 .route-enter-form {
   opacity: 0;
-  transform: translateX(100px);
+  transform: translateX(50px);
 }
 
 .route-enter-active {
-  transition: all 0.5s ease-out;
+  transition: all 0.7s ease-out;
 }
 
 .route-leave-to {
   opacity: 0;
-  transform: translateX(-100px)
+  transform: translateX(-50px)
 }
 
 .route-leave-active {
-  transition: all 0.3s ease-in;
+  transition: all 0.5s ease-in;
 }
 </style>

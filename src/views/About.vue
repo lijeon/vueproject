@@ -2,62 +2,127 @@
   <div class="about">
     <h3>Please hover on videos to learn more :)</h3>
     <div class="container">
-      <div class="box">
-        <div class="videoBox">
-          <video src='../assets/student.mp4' muted autoplay loop></video>
-        </div>
-        <div class="contentBx">
-          <div class="content">
-            <h2>Student</h2>
-            <p>I am a student in Computer Science and Engineering at UBT</p>
+      <transition appear @before-enter="beforEnter" @enter="enter">
+        <div class="box">
+          <div class="videoBox">
+            <video src='../assets/student.mp4' muted autoplay loop></video>
+          </div>
+          <div class="contentBx">
+            <div class="content">
+              <h2>Student</h2>
+              <p>I am a student in Computer Science and Engineering at UBT</p>
+            </div>
           </div>
         </div>
-      </div>
+      </transition>
 
-      <div class="box">
-        <div class="videoBox">
-          <video src='../assets/graduate.mp4' muted autoplay loop></video>
-        </div>
-        <div class="contentBx">
-          <div class="content">
-            <h2>Graduand</h2>
-            <p>Soon, I will have Bachelor's degree</p>
+      <transition appear @before-enter="beforEnter1" @enter="enter1">
+        <div class="box">
+          <div class="videoBox">
+            <video src='../assets/graduate.mp4' muted autoplay loop></video>
+          </div>
+          <div class="contentBx">
+            <div class="content">
+              <h2>Graduand</h2>
+              <p>Soon, I will graduate and have Bachelor's degree</p>
+            </div>
           </div>
         </div>
-      </div>
+      </transition>
 
-      <div class="box">
-        <div class="videoBox">
-          <video src='../assets/work.mp4' muted autoplay loop></video>
-        </div>
-        <div class="contentBx">
-          <div class="content">
-            <h2>Work</h2>
-            <p>I work as a full time frontend developer in Hotelkey, Inc.</p>
+      <transition appear @before-enter="beforEnter2" @enter="enter2">
+        <div class="box">
+          <div class="videoBox">
+            <video src='../assets/work.mp4' muted autoplay loop></video>
+          </div>
+          <div class="contentBx">
+            <div class="content">
+              <h2>Work</h2>
+              <p>I work as a full time frontend developer in Hotelkey, Inc.</p>
+            </div>
           </div>
         </div>
-      </div>
+      </transition>
 
-      <div class="box">
-        <div class="videoBox">
-         <video src='../assets/hobby.mp4' muted autoplay loop></video>
-        </div>
-        <div class="contentBx">
-          <div class="content">
-            <h2>Hobbys and Interests</h2>
-            <p>Painting, Photogrpahy, Sports, Writting, Reading, Walking</p>
+      <transition appear @before-enter="beforEnter3" @enter="enter3">
+        <div class="box">
+          <div class="videoBox">
+            <video src='../assets/hobby.mp4' muted autoplay loop></video>
+          </div>
+          <div class="contentBx">
+            <div class="content">
+              <h2>Hobbys and Interests</h2>
+              <p>Painting, Photogrpahy, Sports, Writting, Reading, Walking</p>
+            </div>
           </div>
         </div>
-      </div>
+      </transition>
     </div>
   </div>
 </template>
 
 
 <script>
+import gsap from 'gsap'
  /* eslint-disable */
 export default {
   name: 'Home',
+  data() {
+    return {
+      isActive: false,
+      activeNav: false,
+      showHeader: false,
+    }
+  },
+  methods: {
+    beforEnter(el) {
+      el.style.transform = 'translateX(-60px)'
+      el.style.opacity = 0
+    },
+    enter(el) {
+      gsap.to(el, {
+        duration: 2,
+        x: 0,
+        opacity: 1
+      })
+    },
+    beforEnter1(el) {
+      el.style.transform = 'translateY(-60px)'
+      el.style.opacity = 0
+    },
+    enter1(el) {
+      gsap.to(el, {
+        duration: 1.5,
+        y: 0,
+        opacity: 1
+      })
+    },
+    beforEnter2(el) {
+      el.style.transform = 'translateY(60px)'
+      el.style.opacity = 0
+    },
+    enter2(el) {
+      gsap.to(el, {
+        duration: 1.5,
+        y: 0,
+        opacity: 1
+      })
+    },
+
+    beforEnter3(el) {
+      el.style.transform = 'translateX(60px)'
+      el.style.opacity = 0
+      el.style.transition = '0.3s'
+    },
+    enter3(el) {
+      gsap.to(el, {
+        duration: 2,
+        x: 0,
+        opacity: 1
+      })
+    },
+
+  },
   
   beforeMount(){
       const sound = ( new Audio( require('../../public/sounds/test2.wav')).play());
