@@ -1,6 +1,6 @@
 <template>
   <div class="workedBy">
-    <div class="box" @mouseover="play()" @mouseleave="stopSound()">
+    <div class="box" @mouseover="play()">
       <div class="imgBx">
         <img src="../assets/axh.jpg">
       </div>
@@ -60,9 +60,6 @@ export default {
 
     play(){
       const sound = ( new Audio( require('../../public/sounds/test4.wav')).play());
-    },
-    stopSound(){
-      
     }
       
   }
