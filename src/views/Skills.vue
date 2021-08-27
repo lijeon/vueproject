@@ -141,7 +141,7 @@ export default {
   z-index:-1;
   /* background: rgb(108, 77, 185); */
   background: linear-gradient(235deg,#260833,#650acc);
-  background: #010615;
+  background: url(../assets/done.jpg);
   transition: 0.5s;
   /* clip-path: circle(250px at center);
   box-shadow: 120px 80px 40px 20px #0ff; */
@@ -162,7 +162,7 @@ export default {
   background: #fff;
   border-radius: 10px;
   transform: translateX(-50%) translateY(calc(50px * var(--i))) rotate(40deg) skew(-20deg,-10deg) scale(0.6);
-  box-shadow: 25px 25px 100px rgba(0,0,0.2);
+  box-shadow: 25px 25px 100px rgba(0,0,0,0.2);
   z-index: calc(-1 * var(--i));
   transition: 0.5s;
   /* display: flex; */

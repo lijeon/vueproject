@@ -139,7 +139,7 @@ export default {
   align-content: center;
   flex-wrap: wrap;
   min-height: 100vh;
-  background: #010615;
+  background: url(../assets/done.jpg);
   opacity: 0.99; 
   gap: 50px;
 }
