@@ -59,7 +59,7 @@ export default {
     },
     enter(el) {
       gsap.to(el, {
-        duration: 1,
+        duration: 2,
         x: 0,
         opacity: 1,
 
@@ -71,7 +71,7 @@ export default {
     },
     enter1(el) {
       gsap.to(el, {
-        duration: 1,
+        duration: 2,
         y: 0,
         opacity: 1,
         ease: 'bounce.out'

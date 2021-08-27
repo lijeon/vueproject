@@ -107,7 +107,7 @@
 <script>
  /* eslint-disable */
 export default {
-  name: 'Home',
+  name: 'Work',
   
   beforeMount(){
       const sound = ( new Audio( require('../../public/sounds/test2.wav')).play());
